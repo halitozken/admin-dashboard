@@ -35,6 +35,7 @@ const UsersPage = () => {
                   height={40}
                   className={styles.userImage}
                 />
+                John Doe
               </div>
             </td>
             <td>john@gmail.com</td>

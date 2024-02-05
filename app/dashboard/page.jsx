@@ -20,7 +20,6 @@ const Dashboard = () => {
       <div className={styles.side}>
         <Rightbar />
       </div>
-     
     </div>
   );
 };
