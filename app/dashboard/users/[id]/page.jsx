@@ -13,9 +13,9 @@ const SingleUserPage = () => {
       <div className={styles.formContainer}>
         <form action="" className={styles.form}>
           <label>Username</label>
-          <input type="text" placeholder="John Doe" />
+          <input type="text" name="username" placeholder="John Doe" />
           <label>Email</label>
-          <input type="text" placeholder="johndoe@gmail.com" />
+          <input type="email" name="email" placeholder="johndoe@gmail.com" />
           <label>Password</label>
           <input type="password" name="password" />
           <label>Phone</label>
