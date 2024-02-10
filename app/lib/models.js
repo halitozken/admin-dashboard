@@ -54,7 +54,7 @@ const productSchema = new mongoose.Schema(
       unique: true,
     },
 
-    description: {
+    desc: {
       type: String,
       required: true,
     },
