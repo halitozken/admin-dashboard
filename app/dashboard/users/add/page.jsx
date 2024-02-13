@@ -13,7 +13,7 @@ const AddUserPage = () => {
           name="password"
           required
         />
-        <input type="phone" placeholder="username" name="username" required />
+        <input type="phone" placeholder="phone" name="phone" />
         <select name="isAdmin" id="isAdmin">
           <option value={false}>Is Admin?</option>
           <option value={true}>Yes</option>

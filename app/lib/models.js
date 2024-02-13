@@ -80,7 +80,7 @@ const productSchema = new mongoose.Schema(
     },
 
     size: {
-      type: Boolean,
+      type: String,
     },
   },
   { timestamps: true }

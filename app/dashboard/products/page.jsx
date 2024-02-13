@@ -3,10 +3,10 @@ import Image from "next/image";
 import styles from "@/app/ui/dashboard/products/products.module.css";
 import Pagination from "@/app/ui/dashboard/pagination/pagination";
 import Search from "@/app/ui/dashboard/search/search";
-import { searchParams } from "next/navigation";
+
 import { fetchProducts } from "@/app/lib/data";
 
-const ProductsPage = async () => {
+const ProductsPage = async ({ searchParams }) => {
   const q = searchParams?.q || "";
   const page = searchParams?.page || 1;
 
@@ -48,7 +48,7 @@ const ProductsPage = async () => {
               </td>
               <td>{product.desc}</td>
               <td>${product.price}</td>
-              <td>{product.createdAt?.toString().splice(4, 16)}</td>
+              <td>{product.createdAt?.toString().slice(4, 16)}</td>
               <td>{product.stock}</td>
 
               <td>
