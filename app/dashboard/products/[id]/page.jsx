@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "@/app/ui/dashboard/products/singleProduct/singleProduct.module.css";
 
-const SingleProductPage = () => {
+const SingleProductPage = async () => {
   return (
     <div className={styles.container}>
       <div className={styles.infoContainer}>
