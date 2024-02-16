@@ -4,7 +4,7 @@ position: fixed;
 
 .item {
     position: relative;
-    background: linear-gradient(to top, #182237, #253352);
+    background: linear-gradient(to top, #c7c7c7, #f0f0f0);
     padding: 20px 24px;
     border-radius: 10px;
     margin-bottom: 20px;
