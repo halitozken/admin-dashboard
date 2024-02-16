@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import { connectToDb } from "./utils";
 import bcrypt from "bcrypt";
+import { signIn } from "../auth";
 
 export const addProduct = async (formData) => {
   const { title, desc, price, stock, color, size } =
@@ -61,8 +62,6 @@ export const updateProduct = async (formData) => {
   revalidatePath("/dashboard/products");
   redirect("/dashboard/products");
 };
-
-
 
 export const deleteProduct = async (formData) => {
   const { id } = Object.fromEntries(formData);
@@ -153,4 +152,14 @@ export const deleteUser = async (formData) => {
   }
 
   revalidatePath("/dashboard/users");
+};
+
+export const authenticate = async (formData) => {
+  const { username, password } = Object.fromEntries(formData);
+
+  try {
+    await signIn("credentials", { username, password });
+  } catch (error) {
+    throw error;
+  }
 };
